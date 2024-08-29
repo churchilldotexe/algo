@@ -116,6 +116,28 @@ for (let i = 0; i < arr.length; i++) {
 }
 ```
 
+### Quick Sort
+
+A divide and conquer algorithm for sorting. It is somewhat similar to binary search where you eventually have to keep halving the array using the **pivot point** and segregate the low and high of pivot value until it became sorted.
+It uses recursion since it have to keep on halving the array using the pivot point
+
+#### how the algorithm woks?
+
+1. Create two function which is the quick sort function and the partitioning, where you segregate the high and low
+2. In partitioning function, setup an current low index where it is low - 1. The reason why it is low - 1 for bookkeeping purpose, meaning it is being used to keep track of the current low index.
+
+- iterate over the array and compare every value of the array. If the value is lower than the pivot value increment the current low index and swap the compared value to the current low index. The compared index will now be at 0 index(on first comparison and the following swapped index will be place in consecutive order)
+- if the value is higher we skip it.
+- lastly, we increment again the current low index and now we swap the pivot value to that index and return the current low index
+
+3. In quick sort function, this is where we do the recursion.
+
+- First the base case is when the high and low is the same, by then , we finish the recursion.
+- Then, get the pivot index from our partitioning function
+- and now we can do the recursive twice for two sides and the pivot index must not be included since it is already sorted. First recursion is pivot index - 1 and the second recursion is pivot index + 1
+
+![illustration for quicksort](./quicksort.jpg)
+
 ---
 
 ### Recursion
@@ -130,3 +152,5 @@ post - a case/logic that you can do after recursion( this will fire when the rec
 ![diagram for recursion example](./recursion-diagram.jpg)
 
 ![diagram for maze solver](./maze-solver.jpg)
+
+---
