@@ -95,8 +95,11 @@ For its grow operations it has a time complexity as follows:
 Have two categories:
 
 - Singly Linked
+
+![illustration for doubly linked list](./singly-linked-list.jpg)
+
 - Doubly Linked
 
-It is a Tree/graph like structure where it has its own node. It has a head and tail that points the start of the linked list and end of the linked list. In order to the get the value of a node you have to traverse from head to the n value. The good thing about this structure is the operations for head and tails is constant since you have a reference for the both of them you don't to traverse over the nodes and you don't really care or need the length of the linked list. Traversing in other hand is where it became O(n) linear since you have to go node for node to get the result of the (n) node that you need.
-
 ![illustration for doubly linked list](./doubly-linked-list.jpg)
+
+It is a Tree/graph like structure where it has its own node. It has a head and tail that points the start of the linked list and end of the linked list. In order to the get the value of a node you have to traverse from head to the n value. The good thing about this structure is the operations for head and tails is constant since you have a reference for the both of them you don't to traverse over the nodes and you don't really care or need the length of the linked list. Traversing in other hand is where it became O(n) linear since you have to go node for node to get the result of the (n) node that you need.
