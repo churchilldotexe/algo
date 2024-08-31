@@ -142,6 +142,8 @@ It uses recursion since it have to keep on halving the array using the pivot poi
 
 ### Recursion
 
+Think of it as a complicated domino effect
+
 "base case" - you can treat it like a case to stop the recursion. Base Case is not only for when you achieved the goal of a function but it is better to put as much case as you can to stop the recursion in the base case to make the recursion process simple
 
 Have 3 process for recursive case:
@@ -154,3 +156,33 @@ post - a case/logic that you can do after recursion( this will fire when the rec
 ![diagram for maze solver](./maze-solver.jpg)
 
 ---
+
+## Tree Search
+
+### Depth-first Search(DFS)
+
+It is a search that goes to the deepest node first, means, it uses a stack or recursion where from root you'll go left(or right) node then traverse down until you hit the last leaf of node and return.
+
+It has three search pattern
+
+- pre order search = this is where the root node will be executed first, since you'll hit the node and travel to left(or right) then after the left(or right) you go to the remaining part of the tree (branch)
+
+[link to the code](../kata-machine/src/day1/BTPreOrder.ts)
+
+- in order search = the root node will be executed at the middle because you'll traverse first in the left then after the left. You'll hit the node and then the right
+
+[link to the code](../kata-machine/src/day1/BTInOrder.ts)
+
+- post order search = the root is in the last, means , you'll traverse in the left then to the right and the root
+
+[link to the code](../kata-machine/src/day1/BTPostOrder.ts)
+
+![diagram for DFS](./DFS-search.jpg)
+
+By doing this search you are retaining the shape of the tree because you have a pattern in searching, thus, DFS is good at comparing trees
+
+### Breadth-First Search(BFS)
+
+This is a tree search that traverse/search by level. It means that from root level then to another level and so on until you hit the last level of the tree. It uses Queue structure because what it does is, every time you visit a level you'll put/push it at the end of your search and you'll search from the start.
+
+Example:

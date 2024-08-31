@@ -22,6 +22,13 @@ Example:
 
 ## trick to tell what complexity a logic is
 
+- identify what your input is
+- then double it.
+
+  - if the amount of operation grows twice = linear
+  - if the amount of operations grows quadratically = n2(area) thus area
+  - if the amount of operations grows eight folds = n3 (cube) thus volume
+
 - look for loops
 
 ```ts
@@ -103,3 +110,15 @@ Have two categories:
 ![illustration for doubly linked list](./doubly-linked-list.jpg)
 
 It is a Tree/graph like structure where it has its own node. It has a head and tail that points the start of the linked list and end of the linked list. In order to the get the value of a node you have to traverse from head to the n value. The good thing about this structure is the operations for head and tails is constant since you have a reference for the both of them you don't to traverse over the nodes and you don't really care or need the length of the linked list. Traversing in other hand is where it became O(n) linear since you have to go node for node to get the result of the (n) node that you need.
+
+---
+
+### Trees
+
+It is list of nodes with its branches nodes.
+
+Types:
+
+- general tree = a node tree that can have an infinite branching factor, means, it is possible that a node can have multiple leaves or children and the other node don't have a leaf.
+
+- binary tree = by the word itself binary means two. It has a branching factor of 2, means, every node can only have two leaves ( 2 children)
