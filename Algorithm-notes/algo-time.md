@@ -157,7 +157,7 @@ post - a case/logic that you can do after recursion( this will fire when the rec
 
 ---
 
-## Tree Search
+## Tree Algorithms
 
 ### Depth-first Search(DFS)
 
@@ -183,6 +183,35 @@ By doing this search you are retaining the shape of the tree because you have a 
 
 ### Breadth-First Search(BFS)
 
-This is a tree search that traverse/search by level. It means that from root level then to another level and so on until you hit the last level of the tree. It uses Queue structure because what it does is, every time you visit a level you'll put/push it at the end of your search and you'll search from the start.
+This is a tree search that traverse/search by level **(tree level search/traversal)**. It means that from root level then to another level and so on until you hit the last level of the tree. It uses Queue structure because what it does is, every time you visit a level you'll put/push it at the end of your search and you'll search from the start.
 
-Example:
+![BFS diagram](./BFS.jpg)
+
+### Heap
+
+#### Insertion O(logn)
+
+When inserting a value for Heaps either max or low heap it always follow this pattern:
+
+1. The value being inserted will always be at the end of an array. This makes it constant especially for Array List.
+2. To maintain its structure(max/min) You have to bubble it,called Upheap(heapify up), up to/until it met the structure condition.
+   - Max Heap: parent must be higher than the value being Upheaped.
+   - Min Heap: parent must be lower than the value being Upheaped.
+
+![heap insertion diagram](./MinHeapInsertion.jpg)
+
+#### Deletion O(logN)
+
+Deletion in Heap is the opposite with Insertion, it removes the value of index[0]/root but the implementation is different, and can be harder. Harder than insertion because of the rules/checks that you can to set.
+
+1. First get the reference of the first index value , to be returned.
+2. Now swap the first index to the last index, in JavaScript, you can now pop() it.
+3. Now in the root (which was the last index value), we can now do bubble down (Down Heap) to maintain the structure of our heap.
+4. This is where it became harder than insertion. We now check which value of left and right is the lowest(min heap)/highest(max heap). Since it is a complete Binary tree you can take advantage of its rule where it the filling must start from left to right. So when doing a check(especially for last node) if the Left child is empty, the right child is automatically empty.
+5. Swap that value and keep on doing recursion (comparing parent,child and swap) until the structure is maintain or until you hit the leaf.
+
+![heap deletion diagram](./MinHeapDeletion.jpg)
+
+As you can notice the pattern here is mostly if not exactly the same with queue because heap operations is really a Priority queue
+
+---

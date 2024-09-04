@@ -121,4 +121,25 @@ Types:
 
 - general tree = a node tree that can have an infinite branching factor, means, it is possible that a node can have multiple leaves or children and the other node don't have a leaf.
 
-- binary tree = by the word itself binary means two. It has a branching factor of 2, means, every node can only have two leaves ( 2 children)
+#### binary tree
+
+By the word itself binary means two. It has a branching factor of 2, means, every node can only have two leaves ( 2 children)
+
+##### Heap
+
+A Complete Binary Tree based structure but this data structure is in array/array list. It is structured differently as an array and the way you read it is different. At a first glance it is a normal array `const arr = [50,25,30,23,18,28,15]`. But if it is structured like a tree in a way to achieve a `O(logn)` complexity on some operation like, insertion , deletion and even can achieve constant time for look up of highest(max heap) and lowest(min heap) value. Heap look like this like this:
+
+![illustration for Max Head](./MaxHeap.jpg)
+
+There are rules for heaps to make it more structured and to be a complete binary tree:
+
+- Min Heap:
+
+  1. Root must be the lowest value in all the nodes.
+  2. parent node must be lower or equal to its children
+  3. filling up a heap must be from left to right to avoid holes and achieves complete binary tree
+
+- Max Heap:
+  1. Root must be the Highest value in all the nodes.
+  2. Parent node must be higher or equal to its children
+  3. filling up a heap must be from left to right to avoid holes and achieves complete binary tree
